@@ -1,6 +1,6 @@
 <div *ngIf="position === 'PG'" class="playerOptions">
   <h3>Point Guards</h3>
-  <div class="players">
+  <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
       *ngFor="let player of pointGuards"
       [playerOverall]="player.overall"
@@ -12,7 +12,7 @@
 
 <div *ngIf="position === 'SG'" class="playerOptions">
   <h3>Shooting Guards</h3>
-  <div class="players">
+  <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
       *ngFor="let player of shootingGuards"
       [playerOverall]="player.overall"
@@ -24,7 +24,7 @@
 
 <div *ngIf="position === 'SF'" class="playerOptions">
   <h3>Small Forwards</h3>
-  <div class="players">
+  <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
       *ngFor="let player of smallForwards"
       [playerOverall]="player.overall"
@@ -36,7 +36,7 @@
 
 <div *ngIf="position === 'PF'" class="playerOptions">
   <h3>Power Forwards</h3>
-  <div class="players">
+  <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
       *ngFor="let player of powerForwards"
       [playerOverall]="player.overall"
@@ -48,7 +48,7 @@
 
 <div *ngIf="position === 'C'" class="playerOptions">
   <h3>Centers</h3>
-  <div class="players">
+  <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
       *ngFor="let player of centers"
       [playerOverall]="player.overall"

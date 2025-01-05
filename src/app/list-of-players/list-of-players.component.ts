@@ -41,5 +41,8 @@ export class ListOfPlayersComponent {
       this.centers = players;
     });
   }
+  CardOptionClick() {
+    this.position = '';
+  }
 }
 export { PlayerList };

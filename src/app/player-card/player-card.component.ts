@@ -15,7 +15,6 @@ export class PlayerCardComponent {
   @Input() position: string = '';
   @Input() listPosition: string = '';
   showOptions = false;
-  playerOptions: PlayerOption[] = [];
   private playerService = inject(PlayersService);
 
   pointGuards: PlayerList[] = [];
@@ -40,5 +39,8 @@ export class PlayerCardComponent {
     this.playerService.getCenter().subscribe((players) => {
       this.centers = players;
     });
+  }
+  CardClick() {
+    this.showOptions = true;
   }
 }
