@@ -1,0 +1,31 @@
+<a routerLink="/menu" class="menu">MENU</a>
+<div class="players">
+  <div class="players">
+    <app-player-card
+      (clicked)="loadComponent('PG')"
+      position="POINT GUARD"
+      listPosition="'PG'"
+    ></app-player-card>
+    <app-player-card
+      (clicked)="loadComponent('SG')"
+      position="SHOOTING GUARD"
+      listPosition="SG"
+    ></app-player-card>
+    <app-player-card
+      (clicked)="loadComponent('SF')"
+      position="SMALL FORWARD"
+      listPosition="SF"
+    ></app-player-card>
+    <app-player-card
+      (clicked)="loadComponent('PF')"
+      position="POWER FORWARD"
+      listPosition="PF"
+    ></app-player-card>
+    <app-player-card
+      (clicked)="loadComponent('C')"
+      position="CENTER"
+      listPosition="C"
+    ></app-player-card>
+  </div>
+</div>
+<app-list-of-players [position]="this.position"></app-list-of-players>

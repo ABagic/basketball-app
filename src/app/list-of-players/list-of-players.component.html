@@ -1,0 +1,59 @@
+<div *ngIf="position === 'PG'" class="playerOptions">
+  <h3>Point Guards</h3>
+  <div class="players">
+    <app-player-card-option
+      *ngFor="let player of pointGuards"
+      [playerOverall]="player.overall"
+      [playerName]="player.name"
+      [playerPosition]="'POINT GUARD'"
+    ></app-player-card-option>
+  </div>
+</div>
+
+<div *ngIf="position === 'SG'" class="playerOptions">
+  <h3>Shooting Guards</h3>
+  <div class="players">
+    <app-player-card-option
+      *ngFor="let player of shootingGuards"
+      [playerOverall]="player.overall"
+      [playerName]="player.name"
+      [playerPosition]="'SHOOTING GUARD'"
+    ></app-player-card-option>
+  </div>
+</div>
+
+<div *ngIf="position === 'SF'" class="playerOptions">
+  <h3>Small Forwards</h3>
+  <div class="players">
+    <app-player-card-option
+      *ngFor="let player of smallForwards"
+      [playerOverall]="player.overall"
+      [playerName]="player.name"
+      [playerPosition]="'SMALL FORWARD'"
+    ></app-player-card-option>
+  </div>
+</div>
+
+<div *ngIf="position === 'PF'" class="playerOptions">
+  <h3>Power Forwards</h3>
+  <div class="players">
+    <app-player-card-option
+      *ngFor="let player of powerForwards"
+      [playerOverall]="player.overall"
+      [playerName]="player.name"
+      [playerPosition]="'POWER FORWARD'"
+    ></app-player-card-option>
+  </div>
+</div>
+
+<div *ngIf="position === 'C'" class="playerOptions">
+  <h3>Centers</h3>
+  <div class="players">
+    <app-player-card-option
+      *ngFor="let player of centers"
+      [playerOverall]="player.overall"
+      [playerName]="player.name"
+      [playerPosition]="'CENTER'"
+    ></app-player-card-option>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+.player {
+  position: relative;
+  height: 460px;
+  width: 300px;
+  background-image: url("../../assets/player1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.player-card-border {
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 60px;
+  width: 280px;
+  height: 400px;
+  background-color: #10e795;
+  clip-path: polygon(
+    30px 0,
+    100% 0,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    0 100%,
+    0 30px
+  );
+}
+
+.player-card {
+  width: 270px;
+  height: 390px;
+  background-image: linear-gradient(
+      rgba(11, 3, 111, 0) 0%,
+      rgba(11, 3, 111, 0) 70%,
+      rgba(11, 3, 111, 0.44) 77%,
+      rgba(11, 3, 111, 0.9) 100%
+    ),
+    url("../../assets/marble.png");
+  clip-path: polygon(
+    27px 0,
+    100% 0,
+    100% calc(100% - 37px),
+    calc(100% - 37px) 100%,
+    0 100%,
+    0 27px
+  );
+}
+
+.player-overall {
+  z-index: 1;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 1.75rem;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  color: white;
+  background-color: #dc4646;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.281) inset;
+}
+
+.player-name {
+  position: absolute;
+  width: 100%;
+  font-size: 2.19rem;
+  bottom: 20px;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+}
+
+.player-position {
+  position: relative;
+  top: 55px;
+  left: 30px;
+  width: 190px;
+  height: 80px;
+  padding-top: 10px;
+  font-size: 1.75rem;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  background-color: #e39b00;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.281) inset;
+}

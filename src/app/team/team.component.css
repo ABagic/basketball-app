@@ -1,0 +1,24 @@
+.menu {
+  width: 320px;
+  height: 110px;
+  font-size: 2.75rem;
+  font-family: "Anton", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to right, #41c4e1, #43e9d8);
+  border-radius: 50px;
+  margin: 100px auto 50px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team {
+  font-size: 2.75rem;
+  font-family: "Anton", sans-serif;
+  color: #fff;
+  text-align: center;
+  width: 400px;
+  margin: 150px auto 0;
+}
