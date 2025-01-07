@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { PlayerList } from '../models/playerList.model';
 import { CommonModule } from '@angular/common';
 import { PlayersService } from '../services/players.service';
@@ -23,6 +23,9 @@ export class ListOfPlayersComponent {
   smallForwards: PlayerList[] = [];
   powerForwards: PlayerList[] = [];
   centers: PlayerList[] = [];
+  playerName: string | null = null;
+  playerOverall: number | null = null;
+  showOption: boolean | null = null;
 
   constructor() {
     this.playerService.getPointGuard().subscribe((players) => {
@@ -41,8 +44,18 @@ export class ListOfPlayersComponent {
       this.centers = players;
     });
   }
+
   CardOptionClick() {
     this.position = '';
+    this.playerName = 'HEHEHE HeHe';
+    this.playerOverall = 100;
+    this.showOption = false;
+  }
+
+  @Output() dataToCard = new EventEmitter<any>();
+
+  receiveData(data: any) {
+    this.dataToCard.emit(data);
   }
 }
 export { PlayerList };

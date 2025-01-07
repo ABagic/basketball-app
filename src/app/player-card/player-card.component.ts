@@ -43,4 +43,10 @@ export class PlayerCardComponent {
   CardClick() {
     this.showOptions = true;
   }
+
+  @Output() dataToDraft = new EventEmitter<any>();
+
+  receiveData(data: any) {
+    this.dataToDraft.emit(data);
+  }
 }

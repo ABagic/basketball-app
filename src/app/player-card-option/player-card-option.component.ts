@@ -11,4 +11,18 @@ export class PlayerCardOptionComponent {
   @Input() playerName: string = '';
   @Input() playerOverall: number = 0;
   @Input() playerPosition: string = '';
+
+  @Output() dataToList = new EventEmitter<{
+    name: string;
+    overall: number;
+    position: string;
+  }>();
+
+  sendData() {
+    this.dataToList.emit({
+      name: this.playerName,
+      overall: this.playerOverall,
+      position: this.playerPosition,
+    });
+  }
 }

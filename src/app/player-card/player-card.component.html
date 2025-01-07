@@ -7,4 +7,5 @@
 <app-list-of-players
   *ngIf="showOptions"
   [position]="listPosition"
+  (dataToCard)="receiveData($event)"
 ></app-list-of-players>
