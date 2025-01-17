@@ -1,4 +1,8 @@
-<div class="player" (click)="sendData()">
+<div
+  class="player"
+  (click)="sendData()"
+  [ngStyle]="{ 'background-image': 'url(../../media/' + photo + ')' }"
+>
   <div class="player-card-border">
     <div class="player-overall">
       {{ playerOverall }}

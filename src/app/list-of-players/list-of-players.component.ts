@@ -25,6 +25,7 @@ export class ListOfPlayersComponent {
   centers: PlayerList[] = [];
   playerName: string | null = null;
   playerOverall: number | null = null;
+  playerImage: string | null = null;
   showOption: boolean | null = null;
 
   constructor() {
@@ -46,9 +47,6 @@ export class ListOfPlayersComponent {
   }
 
   CardOptionClick() {
-    this.position = '';
-    this.playerName = 'HEHEHE HeHe';
-    this.playerOverall = 100;
     this.showOption = false;
   }
 

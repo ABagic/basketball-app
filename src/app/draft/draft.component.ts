@@ -56,5 +56,6 @@ export class DraftComponent {
       (item) => item.position === 'POWER FORWARD'
     );
     this.selectedC = this.dataFromC.find((item) => item.position === 'CENTER');
+    console.log(this.selectedPG);
   }
 }

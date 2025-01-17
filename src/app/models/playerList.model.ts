@@ -1,4 +1,5 @@
 export interface PlayerList {
+  image: string;
   name: string;
   overall: number;
   secondaryPosition: string;

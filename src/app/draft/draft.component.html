@@ -8,9 +8,10 @@
   ></app-player-card>
   <app-player-card-option
     *ngIf="playerSelected('POINT GUARD')"
-    [playerOverall]="this.selectedPG?.overall ?? 0"
-    [playerName]="this.selectedPG?.name ?? ''"
-    [playerPosition]="this.selectedPG?.position ?? ''"
+    [playerOverall]="this.selectedPG.overall"
+    [playerName]="this.selectedPG.name"
+    [playerPosition]="this.selectedPG.position"
+    [playerImage]="this.selectedPG.image"
   ></app-player-card-option>
 
   <app-player-card
