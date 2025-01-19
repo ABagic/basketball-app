@@ -1,1 +1,68 @@
-<p>all-time-draft works!</p>
+<a routerLink="/menu" class="menu">MENU</a>
+<div class="players">
+  <app-player-card
+    *ngIf="!playerSelected('POINT GUARD')"
+    position="POINT GUARD"
+    listPosition="PG"
+    (dataToDraft)="receiveData($event)"
+  ></app-player-card>
+  <app-player-card-option
+    *ngIf="playerSelected('POINT GUARD')"
+    [playerOverall]="this.selectedPG.overall"
+    [playerName]="this.selectedPG.name"
+    [playerPosition]="this.selectedPG.position"
+    [playerImage]="this.selectedPG.image"
+  ></app-player-card-option>
+
+  <app-player-card
+    *ngIf="!playerSelected('SHOOTING GUARD')"
+    position="SHOOTING GUARD"
+    listPosition="SG"
+    (dataToDraft)="receiveData($event)"
+  ></app-player-card>
+  <app-player-card-option
+    *ngIf="playerSelected('SHOOTING GUARD')"
+    [playerOverall]="this.selectedSG?.overall ?? 0"
+    [playerName]="this.selectedSG?.name ?? ''"
+    [playerPosition]="this.selectedSG?.position ?? ''"
+  ></app-player-card-option>
+
+  <app-player-card
+    *ngIf="!playerSelected('SMALL FORWARD')"
+    position="SMALL FORWARD"
+    listPosition="SF"
+    (dataToDraft)="receiveData($event)"
+  ></app-player-card>
+  <app-player-card-option
+    *ngIf="playerSelected('SMALL FORWARD')"
+    [playerOverall]="this.selectedSF?.overall ?? 0"
+    [playerName]="this.selectedSF?.name ?? ''"
+    [playerPosition]="this.selectedSF?.position ?? ''"
+  ></app-player-card-option>
+
+  <app-player-card
+    *ngIf="!playerSelected('POWER FORWARD')"
+    position="POWER FORWARD"
+    listPosition="PF"
+    (dataToDraft)="receiveData($event)"
+  ></app-player-card>
+  <app-player-card-option
+    *ngIf="playerSelected('POWER FORWARD')"
+    [playerOverall]="this.selectedPF?.overall ?? 0"
+    [playerName]="this.selectedPF?.name ?? ''"
+    [playerPosition]="this.selectedPF?.position ?? ''"
+  ></app-player-card-option>
+
+  <app-player-card
+    *ngIf="!playerSelected('CENTER')"
+    position="CENTER"
+    listPosition="C"
+    (dataToDraft)="receiveData($event)"
+  ></app-player-card>
+  <app-player-card-option
+    *ngIf="playerSelected('CENTER')"
+    [playerOverall]="this.selectedC?.overall ?? 0"
+    [playerName]="this.selectedC?.name ?? ''"
+    [playerPosition]="this.selectedC?.position ?? ''"
+  ></app-player-card-option>
+</div>

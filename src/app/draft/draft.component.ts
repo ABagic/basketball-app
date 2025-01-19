@@ -27,7 +27,7 @@ export class DraftComponent {
     this.showOption = true;
   }
 
-  dataFromC: any[] = [];
+  selectedPlayers: any[] = [];
   selectedPG: { name: string; overall: number; position: string } | any;
   selectedSG: { name: string; overall: number; position: string } | any;
   selectedSF: { name: string; overall: number; position: string } | any;
@@ -35,27 +35,29 @@ export class DraftComponent {
   selectedC: { name: string; overall: number; position: string } | any;
 
   receiveData(data: any) {
-    this.dataFromC.push(data);
+    this.selectedPlayers.push(data);
     this.findItemByPosition();
   }
 
   playerSelected(position: string): boolean {
-    return this.dataFromC.some((player) => player.position === position);
+    return this.selectedPlayers.some((player) => player.position === position);
   }
   findItemByPosition() {
-    this.selectedPG = this.dataFromC.find(
+    this.selectedPG = this.selectedPlayers.find(
       (item) => item.position === 'POINT GUARD'
     );
-    this.selectedSG = this.dataFromC.find(
+    this.selectedSG = this.selectedPlayers.find(
       (item) => item.position === 'SHOOTING GUARD'
     );
-    this.selectedSF = this.dataFromC.find(
+    this.selectedSF = this.selectedPlayers.find(
       (item) => item.position === 'SMALL FORWARD'
     );
-    this.selectedPF = this.dataFromC.find(
+    this.selectedPF = this.selectedPlayers.find(
       (item) => item.position === 'POWER FORWARD'
     );
-    this.selectedC = this.dataFromC.find((item) => item.position === 'CENTER');
+    this.selectedC = this.selectedPlayers.find(
+      (item) => item.position === 'CENTER'
+    );
     console.log(this.selectedPG);
   }
 }
