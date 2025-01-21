@@ -1,8 +1,8 @@
-<div *ngIf="position === 'PG'" class="playerOptions">
+<div *ngIf="position === 'PG' || position === 'AT-PG'" class="playerOptions">
   <h3>Point Guards</h3>
   <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
-      *ngFor="let player of pointGuards"
+      *ngFor="let player of position === 'PG' ? pointGuards : ATPointGuards"
       [playerOverall]="player.overall"
       [playerName]="player.name"
       [playerPosition]="'POINT GUARD'"
@@ -12,53 +12,59 @@
   </div>
 </div>
 
-<div *ngIf="position === 'SG'" class="playerOptions">
+<div *ngIf="position === 'SG' || position === 'AT-SG'" class="playerOptions">
   <h3>Shooting Guards</h3>
   <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
-      *ngFor="let player of shootingGuards"
+      *ngFor="
+        let player of position === 'SG' ? shootingGuards : ATShootingGuards
+      "
       [playerOverall]="player.overall"
       [playerName]="player.name"
       [playerPosition]="'SHOOTING GUARD'"
+      [playerImage]="player.image"
       (dataToList)="receiveData($event)"
     ></app-player-card-option>
   </div>
 </div>
 
-<div *ngIf="position === 'SF'" class="playerOptions">
+<div *ngIf="position === 'SF' || position === 'AT-SF'" class="playerOptions">
   <h3>Small Forwards</h3>
   <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
-      *ngFor="let player of smallForwards"
+      *ngFor="let player of position === 'SF' ? smallForwards : ATSmallForwards"
       [playerOverall]="player.overall"
       [playerName]="player.name"
       [playerPosition]="'SMALL FORWARD'"
+      [playerImage]="player.image"
       (dataToList)="receiveData($event)"
     ></app-player-card-option>
   </div>
 </div>
 
-<div *ngIf="position === 'PF'" class="playerOptions">
+<div *ngIf="position === 'PF' || position === 'AT-PF'" class="playerOptions">
   <h3>Power Forwards</h3>
   <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
-      *ngFor="let player of powerForwards"
+      *ngFor="let player of position === 'PF' ? powerForwards : ATPowerForwards"
       [playerOverall]="player.overall"
       [playerName]="player.name"
       [playerPosition]="'POWER FORWARD'"
+      [playerImage]="player.image"
       (dataToList)="receiveData($event)"
     ></app-player-card-option>
   </div>
 </div>
 
-<div *ngIf="position === 'C'" class="playerOptions">
+<div *ngIf="position === 'C' || position === 'AT-C'" class="playerOptions">
   <h3>Centers</h3>
   <div class="players" (click)="CardOptionClick()">
     <app-player-card-option
-      *ngFor="let player of centers"
+      *ngFor="let player of position === 'C' ? centers : ATCenters"
       [playerOverall]="player.overall"
       [playerName]="player.name"
       [playerPosition]="'CENTER'"
+      [playerImage]="player.image"
       (dataToList)="receiveData($event)"
     ></app-player-card-option>
   </div>

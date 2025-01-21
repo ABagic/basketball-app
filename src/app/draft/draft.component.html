@@ -22,9 +22,10 @@
   ></app-player-card>
   <app-player-card-option
     *ngIf="playerSelected('SHOOTING GUARD')"
-    [playerOverall]="this.selectedSG?.overall ?? 0"
-    [playerName]="this.selectedSG?.name ?? ''"
-    [playerPosition]="this.selectedSG?.position ?? ''"
+    [playerOverall]="this.selectedSG.overall"
+    [playerName]="this.selectedSG.name"
+    [playerPosition]="this.selectedSG.position"
+    [playerImage]="this.selectedSG.image"
   ></app-player-card-option>
 
   <app-player-card
@@ -35,9 +36,10 @@
   ></app-player-card>
   <app-player-card-option
     *ngIf="playerSelected('SMALL FORWARD')"
-    [playerOverall]="this.selectedSF?.overall ?? 0"
-    [playerName]="this.selectedSF?.name ?? ''"
-    [playerPosition]="this.selectedSF?.position ?? ''"
+    [playerOverall]="this.selectedSF.overall"
+    [playerName]="this.selectedSF.name"
+    [playerPosition]="this.selectedSF.position"
+    [playerImage]="this.selectedSF.image"
   ></app-player-card-option>
 
   <app-player-card
@@ -48,9 +50,10 @@
   ></app-player-card>
   <app-player-card-option
     *ngIf="playerSelected('POWER FORWARD')"
-    [playerOverall]="this.selectedPF?.overall ?? 0"
-    [playerName]="this.selectedPF?.name ?? ''"
-    [playerPosition]="this.selectedPF?.position ?? ''"
+    [playerOverall]="this.selectedPF.overall"
+    [playerName]="this.selectedPF.name"
+    [playerPosition]="this.selectedPF.position"
+    [playerImage]="this.selectedPF.image"
   ></app-player-card-option>
 
   <app-player-card
@@ -61,8 +64,9 @@
   ></app-player-card>
   <app-player-card-option
     *ngIf="playerSelected('CENTER')"
-    [playerOverall]="this.selectedC?.overall ?? 0"
-    [playerName]="this.selectedC?.name ?? ''"
-    [playerPosition]="this.selectedC?.position ?? ''"
+    [playerOverall]="this.selectedC.overall"
+    [playerName]="this.selectedC.name"
+    [playerPosition]="this.selectedC.position"
+    [playerImage]="this.selectedC.image"
   ></app-player-card-option>
 </div>

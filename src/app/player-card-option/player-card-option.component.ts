@@ -29,9 +29,4 @@ export class PlayerCardOptionComponent {
       image: this.playerImage,
     });
   }
-
-  getBackgroundImagePath(playerImage: string): string {
-    return `../../assets/${playerImage}`;
-  }
-  photo: string = 'player1.png';
 }

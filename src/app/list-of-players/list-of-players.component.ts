@@ -23,6 +23,12 @@ export class ListOfPlayersComponent {
   smallForwards: PlayerList[] = [];
   powerForwards: PlayerList[] = [];
   centers: PlayerList[] = [];
+  ATPointGuards: PlayerList[] = [];
+  ATShootingGuards: PlayerList[] = [];
+  ATSmallForwards: PlayerList[] = [];
+  ATPowerForwards: PlayerList[] = [];
+  ATCenters: PlayerList[] = [];
+
   playerName: string | null = null;
   playerOverall: number | null = null;
   playerImage: string | null = null;
@@ -43,6 +49,21 @@ export class ListOfPlayersComponent {
     });
     this.playerService.getCenter().subscribe((players) => {
       this.centers = players;
+    });
+    this.playerService.getATPointGuard().subscribe((players) => {
+      this.ATPointGuards = players;
+    });
+    this.playerService.getATShootingGuard().subscribe((players) => {
+      this.ATShootingGuards = players;
+    });
+    this.playerService.getATSmallForward().subscribe((players) => {
+      this.ATSmallForwards = players;
+    });
+    this.playerService.getATPowerForward().subscribe((players) => {
+      this.ATPowerForwards = players;
+    });
+    this.playerService.getATCenter().subscribe((players) => {
+      this.ATCenters = players;
     });
   }
 

@@ -2,7 +2,6 @@
   position: relative;
   height: 460px;
   width: 300px;
-  background-image: url("../../assets/player1.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -36,7 +35,7 @@
       rgba(11, 3, 111, 0.44) 77%,
       rgba(11, 3, 111, 0.9) 100%
     ),
-    url("../../assets/marble.png");
+    url("../../../public/media/marble.png");
   clip-path: polygon(
     27px 0,
     100% 0,
